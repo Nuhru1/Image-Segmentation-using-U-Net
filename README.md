@@ -9,3 +9,4 @@ The dataset available for download on this [link](https://www.epfl.ch/labs/cvlab
 ## Data preparation
 The dataset in the original website contains **2 sub-volumes**. Each sub-volume consists of the first **165** slices of the **1065x2048x1536** image stack.
 In this work we only used **1 sub-volumes** which contains the **training sub-volume** and the **groundtruth training sub-volume**
+
