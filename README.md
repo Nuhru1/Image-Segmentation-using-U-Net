@@ -17,8 +17,8 @@ In this work we only used **1 sub-volumes** which contains the **training sub-vo
     - **What is TIF files:**
 A TIF file contains an image saved in the **Tagged Image File Format ( TIFF )**, a high-quality graphics format. It is often used for storing images with many colors, typically digital photos, and includes support for **layers** and **multiple pages.**
 
+![Screenshot 2021-07-16 123624](https://user-images.githubusercontent.com/44145876/125892071-19609e15-f99a-4fcd-929f-b5df2ecb7ecd.png)
 
-![Screenshot 2021-04-26 143352.png](/.attachments/Screenshot%202021-04-26%20143352-dd85afde-0011-4870-9012-499f68a46abe.png)
 
    The code below will extract the **pages (images)** from the tif file.
 
