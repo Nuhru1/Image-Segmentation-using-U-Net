@@ -51,9 +51,8 @@ for filename in os.listdir(base_path):
 
 result shown on below picture.
 
-![Screenshot 2021-04-26 144538.png](/.attachments/Screenshot%202021-04-26%20144538-879a7a47-c4da-4d6a-977b-a4a27cc72263.png)
+![Screenshot 2021-07-16 123749](https://user-images.githubusercontent.com/44145876/125892173-f964b34b-2daf-4602-a3af-bcd92f959f00.png)
 
-![Screenshot 2021-04-26 144513.png](/.attachments/Screenshot%202021-04-26%20144513-29729fee-6d82-4e25-a11d-067cfd6ee669.png)
 
 
 
@@ -124,9 +123,7 @@ _, acc = model.evaluate(X_test, y_test)
 print("Accuracy = ", (acc * 100.0), "%")
 ```
 
-![Screenshot 2021-04-26 154647.png](/.attachments/Screenshot%202021-04-26%20154647-97f8f9a2-c01a-457d-89e6-b6d679d556e9.png)
-
-
+![Screenshot 2021-07-16 122832](https://user-images.githubusercontent.com/44145876/125892210-b4764c90-5200-47b6-81f9-40a407f9af8a.png)
 
 
 ```
@@ -157,8 +154,9 @@ plt.show()
 ```
 Result:
 
+![Screenshot 2021-07-16 122909](https://user-images.githubusercontent.com/44145876/125892264-3381a8e4-3530-45ba-89f3-e01f5a512f3a.png)
+![Screenshot 2021-07-16 122939](https://user-images.githubusercontent.com/44145876/125892267-238b95b9-2eb1-456a-88bb-3d69a5b48e9f.png)
 
-![acc.png](/.attachments/acc-f43a8727-8e20-4811-aa81-1b8d9c26b6b3.png)![loss.png](/.attachments/loss-70d49ea4-4c53-489b-94b3-5d33e5dc3205.png)
 
 
 # Test:
@@ -184,9 +182,8 @@ plt.title('Prediction on test image')
 plt.imshow(prediction, cmap='gray')
 ```
 Result:
-![Screenshot 2021-04-26 175919.png](/.attachments/Screenshot%202021-04-26%20175919-5eb83449-7926-47ae-8575-f09ebd0cde4b.png)
 
-
+![Screenshot 2021-07-16 123011](https://user-images.githubusercontent.com/44145876/125892302-f29480fe-e2e7-4a2f-b691-c68a5d47ac25.png)
 
 
 # IoU Metric:
@@ -196,7 +193,9 @@ so, if the background is dominant on the picture, the accuracy value will be hig
 Example:
 In the picture below, the accuracy will be very high because, high number of background pixels has been correctly classified, but the white part which is important is not satisfying.
 
-![Screenshot 2021-04-26 192017.png](/.attachments/Screenshot%202021-04-26%20192017-9dc79382-3eb8-4b9c-bcf7-52800a8bedab.png)
+
+![Screenshot 2021-07-16 123032](https://user-images.githubusercontent.com/44145876/125892358-7b3be46b-50eb-4956-b3ee-098993473d61.png)
+
 
 **IoU** is the best metric for segmentation problems.
  - # What is IoU?
@@ -205,16 +204,16 @@ The Intersection over Union (**IoU**) metric, also referred to as the **Jaccard 
 
 Simply, the IoU metric measures the number of pixels **common** between the target and prediction masks divided by the total number of pixels present across both masks.
 
-![Screenshot 2021-04-28 104435.png](/.attachments/Screenshot%202021-04-28%20104435-a75292f9-9b63-4114-8358-1c7e981e06e8.png)
+![Screenshot 2021-07-16 123047](https://user-images.githubusercontent.com/44145876/125892418-1919f673-7a49-4fcd-a00a-fe6f4445635f.png)
 
 **Example:**
 let calculate the IoU score of the following **prediction**, given the **ground truth** labeled mask
 
-![Screenshot 2021-04-28 105026.png](/.attachments/Screenshot%202021-04-28%20105026-859c4bdf-ebae-4564-861c-bac37184aca0.png)
+![Screenshot 2021-07-16 123143](https://user-images.githubusercontent.com/44145876/125892449-8bfceeae-bc06-4e7a-82c5-91f904960242.png)
 
 The intersection (**A∩B**) is comprised of the pixels found in both the prediction mask and the ground truth mask, whereas the union (**A∪B**) is simply comprised of all pixels found in either the prediction or target mask.
 
-![Screenshot 2021-04-28 105334.png](/.attachments/Screenshot%202021-04-28%20105334-e39ad1eb-5915-4f20-b005-4cca97353ab6.png)
+![Screenshot 2021-07-16 123201](https://user-images.githubusercontent.com/44145876/125892475-b5889bce-02f3-4088-9f1d-cf2d8e906da0.png)
 
 
 Code:
@@ -246,27 +245,26 @@ The funtion above is as metricwhen compiling our model:
 #Result:
 After 20 epochs, we got: **loss: 0.0116 - jacard_coef: 0.8877 - val_loss: 0.0123 - val_jacard_coef: 0.8772**
 
-![Figure 2021-04-28 164009.png](/.attachments/Figure%202021-04-28%20164009-d747271e-263f-424c-bb32-2325418ec2c2.png)![Figure 2021-04-28 164016.png](/.attachments/Figure%202021-04-28%20164016-a815e8a7-8bf9-4184-bcaf-795d1a6a60ef.png)
+![Screenshot 2021-07-16 123224](https://user-images.githubusercontent.com/44145876/125892519-da909a67-89c5-4fa0-8ade-6e0e3466d39b.png)
 
 
 Some predictions on testt images:
 
-![Figure 2021-04-28 164118.png](/.attachments/Figure%202021-04-28%20164118-93b4d49d-a6d0-4106-bd44-914483eb0cb4.png)
-![Figure 2021-04-28 164132.png](/.attachments/Figure%202021-04-28%20164132-95de1f41-77f8-43ec-bb46-14e223f3320d.png)
-![Figure 2021-04-28 164125.png](/.attachments/Figure%202021-04-28%20164125-47be130e-eb9a-4a18-a45d-125afb5f8f81.png)
+![Screenshot 2021-07-16 123259](https://user-images.githubusercontent.com/44145876/125892533-3dd73bd1-ffd1-41d2-bcf8-0bc12f6639a3.png)
+
 
 
 # Dice Coefficient and Dice loss:
 
 **Dice coefficient**, which is essentially a measure of overlap between two samples. This measure ranges from 0 to 1 where a Dice coefficient of 1 denotes perfect and complete overlap.
 
-![Screenshot 2021-04-28 173506.png](/.attachments/Screenshot%202021-04-28%20173506-d78bea81-42ba-4f42-894e-40aab7b01cd6.png)
+![Screenshot 2021-07-16 123314](https://user-images.githubusercontent.com/44145876/125892562-83a5b73b-1958-4f14-9de0-4fdef9876400.png)
 
  **|A∩B|** is approximated as the **element-wise multiplication** between the **prediction** and **target** mask, and then sum the resulting matrix.
 
 **Example**:
 
-![Screenshot 2021-04-28 173741.png](/.attachments/Screenshot%202021-04-28%20173741-2d6bd45a-353a-4713-b853-2cd069797b3a.png)
+![Screenshot 2021-07-16 123333](https://user-images.githubusercontent.com/44145876/125892613-a5963068-72fd-49fb-a060-02691cd06310.png)
 
 
 To quantify **|A|** and **|B|**, some researchers use the **simple sum** whereas other researchers prefer to use the **squared sum** for this calculation. 
@@ -274,7 +272,7 @@ To quantify **|A|** and **|B|**, some researchers use the **simple sum** whereas
 
 **1−Dice** is used to formulate the loss function which can be minimized. This loss function is known as the **soft Dice loss** because we directly use the predicted probabilities instead of thresholding and converting them into a binary mask.
 
-![Screenshot 2021-04-28 175534.png](/.attachments/Screenshot%202021-04-28%20175534-cc293b77-779f-4957-b41e-352e4ae5ffb8.png)
+![Screenshot 2021-07-16 123348](https://user-images.githubusercontent.com/44145876/125892631-bf8087e3-043f-4203-a3d9-965495e5e03d.png)
 
 Code:
 
