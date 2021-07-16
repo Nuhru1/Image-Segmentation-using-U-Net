@@ -289,7 +289,7 @@ def soft_dice_loss(y_true, y_pred, epsilon=1e-6):
     return 1 - np.mean((numerator + epsilon) / (denominator + epsilon)) # average over classes and batch
 ```
 
-
+h
 
 
 
